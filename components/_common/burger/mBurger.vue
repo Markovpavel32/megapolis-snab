@@ -59,7 +59,7 @@ watch(() => props.isOpened, value => {
 }
 
 .animated-icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -87,12 +87,12 @@ watch(() => props.isOpened, value => {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 0px;
+  top: 0;
   left: 8px;
 }
 
 .animated-icon.open span:nth-child(2) {
-  width: 0%;
+  width: 0;
   opacity: 0;
 }
 
