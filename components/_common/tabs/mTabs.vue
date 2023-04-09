@@ -1,11 +1,14 @@
 <template>
   <div class="m-tabs">
     <component
-        :is="tag"
-        class="nav"
+      :is="tag"
+      class="nav"
+      :class="{ 'flex-column': vertical }"
     >
       <li v-for="tab in tabs" class="nav-item">
-        <nuxt-link class="nav-link" :to="tab?.path || tab?.to">{{ tab.title }}</nuxt-link>
+        <nuxt-link class="nav-link" :to="tab?.path || tab?.to">
+          {{ tab.title }}
+        </nuxt-link>
       </li>
     </component>
     <slot />
@@ -18,6 +21,7 @@ import { Tab } from '~/components/_common/tabs/types'
 interface IProps {
   tag?: string;
   tabs: Tab[];
+  vertical?: boolean;
 }
 
 withDefaults(defineProps<IProps>(), {

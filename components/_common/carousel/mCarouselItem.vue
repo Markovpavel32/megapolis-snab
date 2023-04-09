@@ -1,22 +1,29 @@
-<template>
-  <div class="carousel-item active">
-    <div v-if="imgSrc">
-      <slot  name="img">
-        <img :src="imgSrc" class="d-block w-100" />
-      </slot>
-      <slot />
-    </div>
-    <svg v-else class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-    <slot name="caption" />
-  </div>
-</template>
+<!--<template>-->
+<!--  <div ref="item" class="carousel-item">-->
+<!--    <div v-if="imgSrc">-->
+<!--      <slot  name="img">-->
+<!--        <img class="carousel-item__img" :src="imgSrc" />-->
+<!--      </slot>-->
+<!--      <slot />-->
+<!--    </div>-->
+<!--    <svg v-else class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>-->
+<!--    <slot name="caption" />-->
+<!--  </div>-->
+<!--</template>-->
 
-<script setup lang="ts">
-interface IProps {
-  imgSrc?: string;
-}
+<!--<script setup lang="ts">-->
+<!--import { onMounted } from '#imports';-->
 
-const props = defineProps<IProps>()
-</script>
+<!--interface IProps {-->
+<!--  imgSrc?: string;-->
+<!--  active: boolean;-->
+<!--}-->
 
-<style lang="scss" scoped></style>
+<!--const props = defineProps<IProps>()-->
+<!--const item = ref<null | HTMLElement>(null)-->
+<!--onMounted(() => {-->
+<!--  if (props.active) item.value.classList.add('active')-->
+<!--})-->
+<!--</script>-->
+
+<!--<style lang="scss" scoped></style>-->
