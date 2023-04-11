@@ -2,7 +2,7 @@
   <div ref="item" class="carousel-item">
     <div v-if="imgSrc">
       <slot name="img">
-        <img class="carousel-item__img" :src="imgSrc">
+        <img class="carousel-item__img" :src="imgSrc" :alt="alt">
       </slot>
       <slot />
     </div>
@@ -31,7 +31,8 @@ import { onMounted } from '#imports'
 
 interface IProps {
   imgSrc?: string;
-  active: boolean;
+  alt?: string;
+  active?: boolean;
 }
 
 const props = defineProps<IProps>()

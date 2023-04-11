@@ -18,6 +18,7 @@
       <button
         v-for="indicator in slidersLength"
         ref="indicators"
+        :key="indicator"
         type="button"
         :data-bs-target="`#${id}`"
         :data-bs-slide-to="indicator - 1"

@@ -1,38 +1,106 @@
 <template>
-  <m-carousel >
-    <m-carousel-item :img-src="headPic">
-      <template #caption>
-        <h1 class="main__head-title">Производитель бетона и железобетонных изделий</h1>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-      </template>
-    </m-carousel-item>
-<!--    <m-carousel-item />-->
-  </m-carousel>
+  <div>
+    <main-banner class="main mb-5" navigation>
+      <main-banner-item :img-src="headPic" active>
+        <template #caption>
+          <div class="main__head">
+            <h1 class="main__head-title text-uppercase">
+              Производитель бетона<br> и железобетонных изделий
+            </h1>
+            <div class="main__head-description">
+              Сваи, перемычки, плиты перекрытия, дорожные плиты, фундаментальные блоки
+            </div>
+          </div>
+        </template>
+      </main-banner-item>
+      <main-banner-item>
+        <template #caption>
+          <div class="main__head">
+            <h1 class="main__head-title text-uppercase">
+              Производитель бетона<br> и железобетонных изделий
+            </h1>
+            <div class="main__head-description">
+              Сваи, перемычки, плиты перекрытия, дорожные плиты, фундаментальные блоки
+            </div>
+          </div>
+        </template>
+      </main-banner-item>
+    </main-banner>
+    <div class="container">
+      <h2 class="mb-4">
+        Производство
+      </h2>
+      <products-list />
+    </div>
+    <!--    <m-carousel>-->
+    <!--      <slide><div>{{ 1 }}</div></slide>-->
+    <!--    </m-carousel>-->
+  </div>
 </template>
 
 <script setup lang="ts">
-import MCarousel from '~/components/_common/carousel/mCarousel.vue'
-import MCarouselItem from '~/components/_common/carousel/mCarouselItem.vue'
 import headPic from '~/assets/img/head-pic.png'
+import frame from 'assets/img/productCards/concreteSolutions.png'
+import MainBanner from '~/components/mainBanner/MainBanner.vue'
+import MainBannerItem from '~/components/mainBanner/MainBannerItem.vue'
+import ProductsList from '~/components/productsList/ProductsList.vue'
 </script>
 
 <style lang="scss" scoped>
+@import '/assets/styles/main';
+
 .main {
-  &__head-title {
+  &__head {
     position: absolute;
-    left: 0;
-    top: 0;
-    //right: 15%;
-    //top: 1rem;
-    //bottom: 1.25rem;
-    //left: 15%;
-    //padding-top: 1.25rem;
-    //padding-bottom: 1.25rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
     color: #fff;
-    text-align: center;
+    line-height: 140%;
+    font-size: 21px;
+    width: 93%;
+    @include media-breakpoint-up(lg) {
+      max-width: 636px;
+      left: 36%;
+      top: 50%;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 140%;
+      margin-bottom: 24px;
+
+      @include media-breakpoint-up(md) {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 55px;
+      }
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  :deep(.carousel-item__img) {
+    @include media-breakpoint-down(lg) {
+      object-position: -800px;
+    }
   }
 }
 </style>

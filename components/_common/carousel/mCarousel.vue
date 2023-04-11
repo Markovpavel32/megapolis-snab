@@ -1,46 +1,35 @@
 <template>
-  <div :id="id" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-    <div class="carousel-inner">
-      <slot />
-<!--      <div class="carousel-item">-->
-<!--&lt;!&ndash;        <img src="~/assets/img/head-pic.png" class="d-block w-100" />&ndash;&gt;-->
-<!--        <slot />-->
-<!--        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>-->
-<!--        <div class="carousel-caption d-none d-md-block">-->
-<!--          <h5>First slide label</h5>-->
-<!--          <p>Some representative placeholder content for the first slide.</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="carousel-item">-->
-<!--        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>-->
-
-<!--      </div>-->
-<!--      <div class="carousel-item">-->
-<!--        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div>-->
-      <button class="carousel-control-prev" type="button" :data-bs-target="`#${id}`" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" :data-bs-target="`#${id}`" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
+  <render />
 </template>
 
-<script setup lang="ts">
-import { uniqueId } from 'lodash'
+<script lang="ts" setup>
+import { useSlots, h} from 'vue'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-interface IProps {
-  controls?: boolean;
+const slots = useSlots()
+const render = () => {
+  return  h('div', { class: 'mv-slide' }, [
+    h(Carousel, { 'items-to-show': 1 }, {
+      default: () => slots.default && slots.default().map(slide => {
+        if (!slide.props) slide.props = {}
+        return slide
+      }),
+      addons: () => [ h(Navigation),  h(Pagination) ]
+    })
+  ])
 }
-
-const id = uniqueId('carousel_')
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '/assets/styles/main';
+:deep(.carousel__pagination-button::after) {
+  width: 30px;
+  height: 3px;
+  background: $background-secondary;
+}
+
+:deep(.carousel__pagination-button--active::after) {
+  background: $secondary;
+}
+</style>
+

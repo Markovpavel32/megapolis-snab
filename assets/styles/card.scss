@@ -1,0 +1,20 @@
+.card {
+  border-color: transparent;
+  border-radius: 20px;
+
+  &-body {
+    padding: 32px;
+  }
+
+  &-title {
+    color: $primary;
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+  &-text {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
