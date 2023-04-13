@@ -12,5 +12,10 @@ body {
   cursor: pointer;
 }
 
+.form-control-lg {
+  border-radius: 0.25rem;
+}
 
-
+.btn-lg {
+  --bs-btn-border-radius: 0.25rem;
+}

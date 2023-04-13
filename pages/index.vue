@@ -32,15 +32,12 @@
       </h2>
       <products-list />
     </div>
-    <!--    <m-carousel>-->
-    <!--      <slide><div>{{ 1 }}</div></slide>-->
-    <!--    </m-carousel>-->
+    <capture-form />
   </div>
 </template>
 
 <script setup lang="ts">
 import headPic from '~/assets/img/head-pic.png'
-import frame from 'assets/img/productCards/concreteSolutions.png'
 import MainBanner from '~/components/mainBanner/MainBanner.vue'
 import MainBannerItem from '~/components/mainBanner/MainBannerItem.vue'
 import ProductsList from '~/components/productsList/ProductsList.vue'
