@@ -23,9 +23,12 @@
               size="lg"
             />
           </div>
-          <b-button class="d-block w-100" variant="primary" size="lg">
+          <b-button class="d-block w-100 mb-4" variant="primary" size="lg">
             Задать вопрос
           </b-button>
+          <div class="d-flex align-items-center justify-content-center fw-semibold">
+            Или напишите нам в <social-media-icons />
+          </div>
         </b-card-body>
       </b-card>
     </div>
