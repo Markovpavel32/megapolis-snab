@@ -38,7 +38,7 @@ interface IProps {
 const props = defineProps<IProps>()
 const item = ref<null | HTMLElement>(null)
 onMounted(() => {
-  if (props.active) item.value.classList.add('active')
+  if (props.active) item.value?.classList.add('active')
 })
 </script>
 
