@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { uniqueId } from 'lodash'
+import lodash from 'lodash'
 import { Button } from 'bootstrap'
 import { onMounted } from '#imports'
 
@@ -49,6 +49,7 @@ interface IProps {
   controls?: boolean;
 }
 
+const { uniqueId } = lodash
 const id = uniqueId('carousel_')
 const slots = useSlots()
 const slidersLength = slots.default && slots.default().length
