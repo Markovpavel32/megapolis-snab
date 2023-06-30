@@ -26,13 +26,19 @@
         </template>
       </main-banner-item>
     </main-banner>
-    <div class="container">
+    <div class="container mb-5">
       <h2 class="mb-4">
         Производство
       </h2>
       <products-list />
     </div>
-    <capture-form />
+    <capture-form class="mb-5" />
+    <div class="container mb-5">
+      <h2 class="mb-4">
+        Наша техника
+      </h2>
+      <our-technics />
+    </div>
   </div>
 </template>
 
@@ -41,6 +47,7 @@ import headPic from '~/assets/img/head-pic.png'
 import MainBanner from '~/components/mainBanner/MainBanner.vue'
 import MainBannerItem from '~/components/mainBanner/MainBannerItem.vue'
 import ProductsList from '~/components/productsList/ProductsList.vue'
+import OurTechnics from '~/components/ourTechnics/OurTechnics.vue'
 </script>
 
 <style lang="scss" scoped>
