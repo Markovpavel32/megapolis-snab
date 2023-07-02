@@ -39,6 +39,7 @@
       </h2>
       <our-technics />
     </div>
+    <about-company />
   </div>
 </template>
 
@@ -48,6 +49,7 @@ import MainBanner from '~/components/mainBanner/MainBanner.vue'
 import MainBannerItem from '~/components/mainBanner/MainBannerItem.vue'
 import ProductsList from '~/components/productsList/ProductsList.vue'
 import OurTechnics from '~/components/ourTechnics/OurTechnics.vue'
+import AboutCompany from '~/components/aboutCompany/aboutCompany.vue'
 </script>
 
 <style lang="scss" scoped>
