@@ -13,22 +13,22 @@
         >
           <slide>
             <b-card>
-              <img src="../../assets/img/partners/cronospan.png">
+              <img src="../../assets/img/partners/cronospan.png" alt="Кроношпан">
             </b-card>
           </slide>
           <slide>
             <b-card>
-              <img src="../../assets/img/partners/krost.png">
+              <img src="../../assets/img/partners/krost.png" alt="Крост">
             </b-card>
           </slide>
           <slide>
             <b-card>
-              <img src="../../assets/img/partners/atmosphera.png">
+              <img src="../../assets/img/partners/atmosphera.png" alt="Атмосфера">
             </b-card>
           </slide>
           <slide>
             <b-card>
-              <img src="../../assets/img/partners/megapolis.png">
+              <img src="../../assets/img/partners/megapolis.png" alt="Мегаполис">
             </b-card>
           </slide>
         </m-carousel>
