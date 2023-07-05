@@ -1,8 +1,8 @@
 <template>
   <div class="our-workflow">
-    <div class="about-company__container container p-5">
+    <div class="our-workflow__container container p-5">
       <div class="our-workflow__header">
-        <h2 class="our-workflow__title mb-4">
+        <h2 class="our-workflow__title mb-4 fw-bold">
           Как мы работаем
         </h2>
         <div class="our-workflow__subtitle mb-5">
@@ -15,6 +15,7 @@
           :breakpoints="breakPoints"
           :items-to-show="2"
           :pagination="false"
+          viewport-visible
         >
           <slide v-for="(workflow, i) in workflows" :key="i">
             <workflow-card
@@ -101,10 +102,6 @@ const workflows: IWorkflow[] = [
   &__carousel {
     :deep(.carousel__pagination) {
       bottom: -20px !important;
-    }
-
-    :deep(.carousel__viewport) {
-      overflow: visible;
     }
 
     :deep(.carousel__prev) {

@@ -10,17 +10,19 @@ interface IProps {
   itemsToShow?: number;
   breakpoints?: Record<number, Record<string, string|number>>;
   pagination?: boolean;
+  viewportVisible?: boolean;
 }
 
 const props = withDefaults(defineProps<IProps>(), {
   itemsToShow: 1,
   pagination: true,
   breakpoints: () => ({}),
+  viewportVisible: false,
 })
 
 const slots = useSlots()
 const render = () => {
-  return  h('div', { class: 'mv-slide' }, [
+  return  h('div', { class: { 'mv-slide': true, 'viewportVisible': props.viewportVisible } }, [
     h(Carousel, { 'items-to-show': props.itemsToShow, breakpoints: props.breakpoints }, {
       default: () => slots.default && slots.default().map(slide => {
         if (!slide.props) slide.props = {}
@@ -49,6 +51,12 @@ const render = () => {
 
 :deep(.carousel__pagination-button--active::after) {
   background: $secondary;
+}
+
+.viewportVisible {
+  :deep(.carousel__viewport) {
+    overflow: visible;
+  }
 }
 </style>
 

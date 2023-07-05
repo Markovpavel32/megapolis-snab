@@ -27,14 +27,14 @@
       </main-banner-item>
     </main-banner>
     <div class="container mb-5">
-      <h2 class="mb-4">
+      <h2 class="mb-4 fw-bold">
         Производство
       </h2>
       <products-list />
     </div>
     <capture-form class="mb-5" />
     <div class="container mb-5">
-      <h2 class="mb-4">
+      <h2 class="mb-4 fw-bold">
         Наша техника
       </h2>
       <our-technics />
@@ -42,6 +42,7 @@
     <about-company class="mb-5" />
     <our-advantages class="mb-5" />
     <our-workflow class="mb-5" />
+    <partners class="mb-5" />
   </div>
 </template>
 
@@ -52,6 +53,7 @@ import MainBannerItem from '~/components/mainBanner/MainBannerItem.vue'
 import ProductsList from '~/components/productsList/ProductsList.vue'
 import OurTechnics from '~/components/ourTechnics/OurTechnics.vue'
 import AboutCompany from '~/components/aboutCompany/aboutCompany.vue'
+import Partners from '~/components/partners/Partners.vue'
 </script>
 
 <style lang="scss" scoped>
