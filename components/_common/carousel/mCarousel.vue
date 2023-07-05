@@ -6,15 +6,27 @@
 import { useSlots, h} from 'vue'
 import { Carousel, Pagination, Navigation } from 'vue3-carousel'
 
+interface IProps {
+  itemsToShow?: number;
+  breakpoints?: Record<number, Record<string, string|number>>;
+  pagination?: boolean;
+}
+
+const props = withDefaults(defineProps<IProps>(), {
+  itemsToShow: 1,
+  pagination: true,
+  breakpoints: () => ({}),
+})
+
 const slots = useSlots()
 const render = () => {
   return  h('div', { class: 'mv-slide' }, [
-    h(Carousel, { 'items-to-show': 1 }, {
+    h(Carousel, { 'items-to-show': props.itemsToShow, breakpoints: props.breakpoints }, {
       default: () => slots.default && slots.default().map(slide => {
         if (!slide.props) slide.props = {}
         return slide
       }),
-      addons: () => [ h(Navigation),  h(Pagination) ]
+      addons: () => [ h(Navigation),  props.pagination && h(Pagination) ]
     })
   ])
 }

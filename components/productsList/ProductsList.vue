@@ -66,7 +66,7 @@ const products = useState('products', () => [
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  
+
   &__card {
     flex: 1 1 416px;
   }

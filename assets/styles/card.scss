@@ -4,6 +4,10 @@
 
   &-body {
     padding: 32px;
+
+    @media (max-width: 768px) {
+      padding: 24px;
+    }
   }
 
   &-title {

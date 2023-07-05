@@ -8,6 +8,10 @@ body {
   background: #F5F5F5;
 }
 
+body .layout {
+  overflow-x: hidden;
+}
+
 .clickable {
   cursor: pointer;
 }
@@ -18,4 +22,8 @@ body {
 
 .btn-lg {
   --bs-btn-border-radius: 0.25rem;
+}
+
+.carousel {
+  text-align: initial !important;
 }
