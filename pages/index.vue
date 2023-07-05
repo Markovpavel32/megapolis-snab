@@ -41,6 +41,7 @@
     </div>
     <about-company class="mb-5" />
     <our-advantages class="mb-5" />
+    <our-workflow class="mb-5" />
   </div>
 </template>
 

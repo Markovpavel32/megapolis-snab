@@ -80,6 +80,10 @@ import { Slide } from 'vue3-carousel'
       display: flex;
       flex-direction: column;
       padding: 56px 86px 60px 86px;
+
+      @media (max-width: 480px) {
+        padding: 31px 27px 40px 21px;
+      }
     }
     :deep(.card-title) {
       color: #18181A;
