@@ -5,5 +5,13 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss', 'vue3-carousel/dist/carousel.css'],
   vite: {
     plugins: [svgLoader()]
+  },
+  nitro: {
+    plugins: ['~/server/index.ts'],
+    // storage: {
+    //   db: {
+    //
+    //   }
+    // }
   }
 })
