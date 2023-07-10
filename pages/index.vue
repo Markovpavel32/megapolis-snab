@@ -43,6 +43,7 @@
     <our-advantages class="mb-5" />
     <our-workflow class="mb-5" />
     <partners class="mb-5" />
+    <request-form class="mb-5" />
   </div>
 </template>
 
@@ -54,6 +55,7 @@ import ProductsList from '~/components/productsList/ProductsList.vue'
 import OurTechnics from '~/components/ourTechnics/OurTechnics.vue'
 import AboutCompany from '~/components/aboutCompany/aboutCompany.vue'
 import Partners from '~/components/partners/Partners.vue'
+import CaptureForm from '~/components/captureForm/CaptureForm.vue'
 </script>
 
 <style lang="scss" scoped>
