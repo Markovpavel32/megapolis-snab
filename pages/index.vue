@@ -44,6 +44,7 @@
     <our-workflow class="mb-5" />
     <partners class="mb-5" />
     <request-form class="mb-5" />
+    <contacts class="mb-5" />
   </div>
 </template>
 
