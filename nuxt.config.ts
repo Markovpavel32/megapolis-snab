@@ -24,5 +24,8 @@ export default defineNuxtConfig({
         pass: process.env.MAILER_PASS,
       }
     }
+  },
+  components: {
+    dirs: []
   }
 })

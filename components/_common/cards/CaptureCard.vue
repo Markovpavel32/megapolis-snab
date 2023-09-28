@@ -35,6 +35,9 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import SocialMediaIcons from '~/components/socialMediaIcons/SocialMediaIcons.vue'
+
 interface IProps {
   name: string;
   phone: string;

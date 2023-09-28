@@ -20,6 +20,7 @@ import floorSlab from '~/assets/img/productCards/floorSlab.png'
 import reinforcedConcreteLintels from '~/assets/img/productCards/reinforcedConcreteLintels.png'
 import foundationBlocks from '~/assets/img/productCards/foundationBlocks.png'
 import reinforcedConcretePiles from '~/assets/img/productCards/reinforcedConcretePiles.png'
+import { useState } from '#app'
 
 const products = useState('products', () => [
   {

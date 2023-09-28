@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import { onMounted } from '#imports'
+import { ref } from 'vue'
 
 interface IProps {
   imgSrc?: string;

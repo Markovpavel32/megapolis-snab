@@ -15,6 +15,7 @@
 <script setup lang="ts">
 
 import CaptureCard from '~/components/_common/cards/CaptureCard.vue'
+import { useFetch, useState } from '#app'
 
 const name = useState('name', () => '')
 const phone = useState('phone', () => '')

@@ -44,21 +44,18 @@
 import lodash from 'lodash'
 import { Button } from 'bootstrap'
 import { onMounted } from '#imports'
-
-interface IProps {
-  controls?: boolean;
-}
+import { ref, useSlots } from 'vue'
 
 const { uniqueId } = lodash
 const id = uniqueId('carousel_')
 const slots = useSlots()
 const slidersLength = slots.default && slots.default().length
 
-const indicators = ref<null | Button>(null)
+const indicators = ref<null | HTMLButtonElement[]>(null)
 
 
 onMounted(() => {
-  indicators.value && indicators.value[0].classList.add('active')
+  indicators.value[0].classList.add('active')
 })
 </script>
 

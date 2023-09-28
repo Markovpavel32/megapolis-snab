@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import SocialMediaIcons from '~/components/socialMediaIcons/SocialMediaIcons.vue'
 </script>
 
 <style lang="scss" scoped>
