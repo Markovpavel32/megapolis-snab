@@ -16,10 +16,6 @@
     </div>
     <about-company class="mb-5" />
     <our-advantages class="mb-5" />
-    <our-workflow class="mb-5" />
-    <partners class="mb-5" />
-    <request-form />
-    <contacts />
   </div>
 </template>
 

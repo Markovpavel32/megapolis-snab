@@ -1,27 +1,28 @@
 <template>
   <div class="main__head">
     <h1 class="main__head-title text-uppercase">
-      Производитель бетона<br> и железобетонных изделий
+      {{ header }}
     </h1>
     <div class="main__head-description mb-5">
-      Сваи, перемычки, плиты перекрытия, дорожные плиты, фундаментальные блоки
+      {{ description }}
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-sm-6 col-12">
         <b-form-input
           v-bind="input"
           :state="input.modelValue && !errors.input"
-          class="main__banner-field me-3"
+          class="main__banner-field me-3 w-100 mb-3"
           type="text"
           placeholder="Ваш email или телефон"
           size="lg"
         />
       </div>
-      <div class="col">
+      <div class="col-sm-6 col-12">
         <b-button
-          class="main__banner-button col"
+          class="main__banner-button w-100"
           variant="primary"
           size="lg"
+          block
           @click="sendCapture"
         >
           Рассчитать стоимость
@@ -35,6 +36,13 @@
 import { useForm } from 'vee-validate'
 import * as yup from 'yup'
 import { useFetch } from '#app'
+
+type Props = {
+  header: string
+  description?: string
+}
+
+const props = defineProps<Props>()
 
 const { values, errors, defineComponentBinds } = useForm({
   validationSchema: yup.object({
@@ -123,8 +131,5 @@ const sendCapture = async () => {
     }
   }
 
-  &__banner-field {
-    max-width: 306px;
-  }
 }
 </style>

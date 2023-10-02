@@ -3,8 +3,9 @@
     <b-card
       v-for="(product, i) in products"
       :key="i"
-      class="products-list__card"
+      class="products-list__card clickable"
       v-bind="product"
+      @click="$router.push('/products/' + product.value)"
     >
       <b-card-text>
         {{ product.text }}
@@ -24,36 +25,42 @@ import { useState } from '#app'
 
 const products = useState('products', () => [
   {
+    value: 'concrete-solutions',
     title: 'Бетонные растворы',
     imgSrc: concreteSolutions,
     imgTop: true,
     text: 'Поставляем различные бетонные растворы'
   },
   {
+    value: 'indentation-of-piles',
     title: 'Вдавливание свай',
     imgSrc: indentationOfPiles,
     imgTop: true,
     text: 'Цены до 800 руб. за пог. метр сваи с НДС. В зависимости от объема цена обговаривается'
   },
   {
+    value: 'floor-slab',
     title: 'Плита перекрытия ПК',
     imgSrc: floorSlab,
     imgTop: true,
     text: 'Прямые поставки многопустотных плит ПК по обоснованным ценам.'
   },
   {
+    value: 'reinforced-concrete-lintels',
     title: 'Перемычки железобетонные',
     imgSrc: reinforcedConcreteLintels,
     imgTop: true,
     text: 'Прямые поставки перемычки железобетонные для зданий'
   },
   {
+    value: 'foundation-blocks',
     title: 'Блоки фундаментные',
     imgSrc: foundationBlocks,
     imgTop: true,
     text: 'Предлагаем качественные блоки ФБС ГОСТ 13579-78 с доставкой по России'
   },
   {
+    value: 'reinforced-concrete-piles',
     title: 'Сваи железобетонные',
     imgSrc: reinforcedConcretePiles,
     imgTop: true,
