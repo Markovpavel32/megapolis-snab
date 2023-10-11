@@ -16,3 +16,65 @@
 
   --bs-primary: $primary;
 }
+
+@for $i from 0 to 16 {
+  .mr-#{$i} {
+    margin-right: $i * 4px !important;
+  }
+
+  .ml-#{$i} {
+    margin-left: $i * 4px !important;
+  }
+
+  .mx-#{$i} {
+    margin-right: $i * 4px !important;
+    margin-left: $i * 4px !important;
+  }
+
+  .mt-#{$i} {
+    margin-top: $i * 4px !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $i * 4px !important;
+  }
+
+  .my-#{$i} {
+    margin-top: $i * 4px !important;
+    margin-bottom: $i * 4px !important;
+  }
+
+  .m-#{$i} {
+    margin: $i * 4px!important;
+  }
+
+  .pr-#{$i} {
+    padding-right: $i * 4px !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: $i * 4px !important;
+  }
+
+  .px-#{$i} {
+    padding-right: $i * 4px !important;
+    padding-left: $i * 4px !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: $i * 4px !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $i * 4px !important;
+  }
+
+  .py-#{$i} {
+    padding-top: $i * 4px !important;
+    padding-bottom: $i * 4px !important;
+  }
+
+  .p-#{$i} {
+    padding: $i * 4px!important;
+  }
+}

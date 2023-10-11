@@ -46,7 +46,7 @@ const products = useState('products', () => [
     text: 'Прямые поставки многопустотных плит ПК по обоснованным ценам.'
   },
   {
-    value: 'reinforced-concrete-lintels',
+    value: 'lintels',
     title: 'Перемычки железобетонные',
     imgSrc: reinforcedConcreteLintels,
     imgTop: true,
@@ -60,7 +60,7 @@ const products = useState('products', () => [
     text: 'Предлагаем качественные блоки ФБС ГОСТ 13579-78 с доставкой по России'
   },
   {
-    value: 'reinforced-concrete-piles',
+    value: 'piles',
     title: 'Сваи железобетонные',
     imgSrc: reinforcedConcretePiles,
     imgTop: true,

@@ -1,6 +1,6 @@
 <template>
   <div class="our-workflow">
-    <div class="our-workflow__container container p-5">
+    <div class="our-workflow__container container p-12">
       <div class="our-workflow__header">
         <h2 class="our-workflow__title mb-4 fw-bold">
           Как мы работаем

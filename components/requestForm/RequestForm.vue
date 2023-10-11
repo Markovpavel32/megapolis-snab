@@ -1,6 +1,6 @@
 <template>
   <div class="request-form">
-    <div class="container p-5">
+    <div class="container p-12">
       <capture-card
         v-model:name="name"
         v-model:phone="phone"

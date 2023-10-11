@@ -1,6 +1,6 @@
 <template>
   <div class="about-company">
-    <div class="about-company__container container p-5">
+    <div class="about-company__container container p-12">
       <h2 class="mb-4 fw-bold h1 fw-bold">
         О компании
       </h2>

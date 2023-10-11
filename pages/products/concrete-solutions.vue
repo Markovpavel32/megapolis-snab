@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="col-3 d-none d-md-block" />
-        <div class="col-12 col-md-9 p-5 concrete-solutions__main">
+        <div class="col-12 col-md-9 p-12 concrete-solutions__main">
           <h1 class="fw-bold">
             Стоимость бетонных растворов и смесей
           </h1>
