@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { watch, ref } from 'vue'
+
 interface IProps {
   isOpened?: boolean;
 }

@@ -33,6 +33,8 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "nodemailer": "^6.9.3",
-    "vue3-carousel": "^0.2.16"
+    "vee-validate": "^4.11.7",
+    "vue3-carousel": "^0.2.16",
+    "yup": "^1.3.0"
   }
 }
