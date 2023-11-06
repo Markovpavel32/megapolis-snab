@@ -1,6 +1,6 @@
 <template>
   <div class="capture-form">
-    <div class="container p-5">
+    <div class="container p-12">
       <capture-card
         v-model:name="name"
         v-model:phone="phone"
@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import CaptureCard from '~/components/_common/cards/CaptureCard.vue'
+import { useFetch, useState } from '#app'
 
 const name = useState('name', () => '')
 const phone = useState('phone', () => '')

@@ -28,6 +28,7 @@
 
 <script setup lang="ts">
 import { onMounted } from '#imports'
+import { ref } from 'vue'
 
 interface IProps {
   imgSrc?: string;
@@ -37,9 +38,21 @@ interface IProps {
 
 const props = defineProps<IProps>()
 const item = ref<null | HTMLElement>(null)
+const slots = useSlots()
+
 onMounted(() => {
   if (props.active) item.value?.classList.add('active')
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.carousel {
+  &-item {
+    &__img {
+      height: 600px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+</style>

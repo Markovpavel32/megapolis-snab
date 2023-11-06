@@ -7,6 +7,7 @@
   >
     <div class="carousel-indicators">
       <button
+        v-if="slidersLength > 1"
         class="carousel-control-prev"
         type="button"
         :data-bs-target="`#${id}`"
@@ -15,16 +16,20 @@
         <span class="carousel-control-prev-icon" aria-hidden="true" />
         <span class="visually-hidden">Previous</span>
       </button>
+      <template v-if="slidersLength > 1">
+        <button
+          v-for="indicator in slidersLength"
+          ref="indicators"
+          :key="indicator"
+          type="button"
+          :data-bs-target="`#${id}`"
+          :data-bs-slide-to="indicator - 1"
+          :aria-label="`Slide ${indicator}`"
+        />
+      </template>
+
       <button
-        v-for="indicator in slidersLength"
-        ref="indicators"
-        :key="indicator"
-        type="button"
-        :data-bs-target="`#${id}`"
-        :data-bs-slide-to="indicator - 1"
-        :aria-label="`Slide ${indicator}`"
-      />
-      <button
+        v-if="slidersLength > 1"
         class="carousel-control-next"
         type="button"
         :data-bs-target="`#${id}`"
@@ -42,23 +47,19 @@
 
 <script setup lang="ts">
 import lodash from 'lodash'
-import { Button } from 'bootstrap'
 import { onMounted } from '#imports'
-
-interface IProps {
-  controls?: boolean;
-}
+import { ref, useSlots } from 'vue'
 
 const { uniqueId } = lodash
 const id = uniqueId('carousel_')
 const slots = useSlots()
 const slidersLength = slots.default && slots.default().length
 
-const indicators = ref<null | Button>(null)
+const indicators = ref<null | HTMLButtonElement[]>(null)
 
 
 onMounted(() => {
-  indicators.value && indicators.value[0].classList.add('active')
+  if (indicators.value) indicators.value[0].classList.add('active')
 })
 </script>
 
